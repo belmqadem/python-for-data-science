@@ -1,7 +1,10 @@
+from sys import argv, stdin
+
+
 def count_chars(string: str):
     """
-    Docstring for count_chars
-    :param string: The first argument
+    Maps each character to it's type
+    :param string: the first argument passed by the user
     :type string: str
     """
     total = uppers = lowers = punctuations = digits = spaces = 0
@@ -22,8 +25,8 @@ def count_chars(string: str):
 
 def main(argv: str):
     """
-    Docstring for main
-    :param argv: The first argument
+    Main program
+    :param argv: the first argument passed by the user
     :type argv: str
     """
     if len(argv) > 2:
@@ -31,10 +34,8 @@ def main(argv: str):
     elif len(argv) == 2 and argv[1] != "":
         user_input = argv[1]
     else:
-        while True:
-            user_input = input()
-            if user_input != "":
-                break
+        print("What is the text to count?")
+        user_input = stdin.readline()
 
     chars = count_chars(user_input)
     print(f"The text contains {chars[0]} characters:\n\
@@ -46,7 +47,6 @@ def main(argv: str):
 
 
 if __name__ == "__main__":
-    from sys import argv
     try:
         main(argv)
     except AssertionError as e:
