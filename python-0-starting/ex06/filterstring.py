@@ -2,7 +2,7 @@ from sys import argv
 from ft_filter import ft_filter
 
 
-def main(argv):
+def main(argv: list) -> None:
     """
     A program that takes a string and an integer as command-line arguments,
     filters the words in the string based on their length, and prints the

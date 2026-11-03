@@ -42,7 +42,7 @@ NESTED_MORSE = {
 }
 
 
-def main(argv):
+def main(argv: list) -> None:
     """
     Program that takes a string as an argument and encodes it into Morse Code.
     :param argv: List of command-line arguments. The first argument

@@ -1,4 +1,3 @@
-
 import sys
 from os import get_terminal_size
 from time import time
@@ -9,7 +8,6 @@ def ft_tqdm(lst: range) -> None:
     Decorate an iterable object, returning an iterator which acts exactly
     like the original iterable, but prints a dynamically updating
     progress bar every time a value is requested.
-
     :param lst: Iterable to decorate with a progress bar.
     :type lst: range
     """

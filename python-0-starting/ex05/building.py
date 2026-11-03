@@ -26,7 +26,7 @@ def count_chars(string: str) -> tuple:
     return (total, uppers, lowers, punctuations, spaces, digits)
 
 
-def main(argv):
+def main(argv: list) -> None:
     """
     Count how much upper-case characters, lower-case characters,
     punctuation characters, digits, and spaces in the string passed
