@@ -3,7 +3,8 @@ from sys import argv, stdin
 
 def count_chars(string: str):
     """
-    Count how much upper-case characters, lower-case characters, punctuation characters, digits, and spaces.
+    Count how much upper-case characters, lower-case characters,
+    punctuation characters, digits, and spaces.
     :param string: the first argument passed by the user
     :type string: str
     """
@@ -25,7 +26,9 @@ def count_chars(string: str):
 
 def main(argv: str):
     """
-    Main program that takes a single string argument and displays the sums of its upper-case characters, lower-case characters, punctuation characters, digits, and spaces.
+    Main program that takes a single string argument and displays the sums
+    of its upper-case characters, lower-case characters, punctuation
+    characters, digits, and spaces.
     :param argv: the first argument passed by the user
     :type argv: str
     """
