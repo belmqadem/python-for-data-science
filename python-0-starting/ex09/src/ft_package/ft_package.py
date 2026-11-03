@@ -7,8 +7,8 @@ def slugify(text) -> str:
     :return: The slugified version of the input string.
     :rtype: str
     """
-    return text.replace(" ", "-").lower()
+    return "-".join(text.split()).lower()
 
 
 if __name__ == "__main__":
-    print(slugify("1337 coding school"))
+    pass
