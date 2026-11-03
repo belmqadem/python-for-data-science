@@ -4,11 +4,13 @@ from ft_filter import ft_filter
 
 def main(argv):
     """
-    A program that output a list of words from S that have a length
-    greater than N
-    :param argv: argument passed by the user
-    :first argv: a string (S)
-    :second argv: an integer (N)
+    A program that takes a string and an integer as command-line arguments,
+    filters the words in the string based on their length, and prints the
+    filtered words.
+    :param argv: List of command-line arguments. The first argument
+    is the script name, the second argument is the string to be filtered,
+    and the third argument is the length threshold.
+    :type argv: list
     """
     if len(argv) != 3:
         raise AssertionError("the arguments are bad")

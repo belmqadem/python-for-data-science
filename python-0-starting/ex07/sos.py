@@ -43,6 +43,12 @@ NESTED_MORSE = {
 
 
 def main(argv):
+    """
+    Program that takes a string as an argument and encodes it into Morse Code.
+    :param argv: List of command-line arguments. The first argument
+    is the script name, and the second argument is the string to be encoded.
+    :type argv: list
+    """
     if len(argv) != 2:
         raise AssertionError("the arguments are bad")
     try:

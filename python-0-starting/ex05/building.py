@@ -1,12 +1,14 @@
 from sys import argv, stdin
 
 
-def count_chars(string: str):
+def count_chars(string: str) -> tuple:
     """
-    Count how much upper-case characters, lower-case characters,
-    punctuation characters, digits, and spaces.
-    :param string: the first argument passed by the user
+    Count the number of upper-case characters, lower-case characters,
+    punctuation characters, digits, and spaces in the given string.
+    :param string: The string to analyze.
     :type string: str
+    :return: A tuple containing the counts of each character type.
+    :rtype: tuple
     """
     total = uppers = lowers = punctuations = digits = spaces = 0
     for c in string:
@@ -24,13 +26,14 @@ def count_chars(string: str):
     return (total, uppers, lowers, punctuations, spaces, digits)
 
 
-def main(argv: str):
+def main(argv):
     """
-    Main program that takes a single string argument and displays the sums
-    of its upper-case characters, lower-case characters, punctuation
-    characters, digits, and spaces.
-    :param argv: the first argument passed by the user
-    :type argv: str
+    Count how much upper-case characters, lower-case characters,
+    punctuation characters, digits, and spaces in the string passed
+    as an argument.
+    :param argv: List of command-line arguments. The first argument is the
+    script name, and the second argument is the string to be analyzed.
+    :type argv: list
     """
     if len(argv) > 2:
         raise AssertionError("more than one argument is provided")
