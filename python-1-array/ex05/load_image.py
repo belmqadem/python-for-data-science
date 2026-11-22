@@ -6,7 +6,8 @@ VALID_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG')
 
 def ft_load(path: str) -> np.ndarray | None:
     """
-    Load an image from the specified path, print its format and its pixels in RGB, and return it as a NumPy array.
+    Load an image from the specified path, print its format and its pixels
+    in RGB, and return it as a NumPy array.
     """
     if not path.endswith(VALID_EXTENSIONS):
         print("Error: Invalid image format")

@@ -5,7 +5,8 @@ from load_image import ft_load
 
 def rotate_image(path: str) -> np.ndarray | None:
     """
-    Load an image, print its pixel data, number of channel, pixel content and display it after rotating.
+    Load an image, print its pixel data, number of channel, pixel content
+    and display it after rotating.
     """
     rgb_format = ft_load(path)
     if rgb_format is None:

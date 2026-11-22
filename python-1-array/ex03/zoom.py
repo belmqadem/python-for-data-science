@@ -5,7 +5,9 @@ from load_image import ft_load
 
 def zoom_image(path: str) -> np.ndarray | None:
     """
-    Load an image, print its pixel data, number of channel, pixel content and display it after zooming in the center of the image. Also, print the new shape of the image after slicing.
+    Load an image, print its pixel data, number of channel, pixel content
+    and display it after zooming in the center of the image.
+    Also, print the new shape of the image after slicing.
     """
     rgb_format = ft_load(path)
     if rgb_format is None:
@@ -51,6 +53,7 @@ def zoom_image(path: str) -> np.ndarray | None:
     except Exception as e:
         print(f"Error: {e}")
         return None
+
 
 if __name__ == "__main__":
     print(zoom_image("animal.jpeg"))

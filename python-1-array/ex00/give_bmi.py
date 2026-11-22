@@ -15,7 +15,6 @@ def give_bmi(height: list[int | float], weight: list[int | float])\
         except (ValueError, TypeError, FloatingPointError) as e:
             print(f"Error: {e}")
             return []
-    
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
