@@ -3,7 +3,6 @@ from load_csv import load
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import pandas as pd
-import numpy as np
 
 
 def convert_population(value):
@@ -23,16 +22,18 @@ def aff_pop(data: pd.DataFrame, first_country: str, other_country: str):
     Plots the population of two countries over the years.
     """
     if first_country not in data.index or other_country not in data.index:
-        print(f"Error: One or both countries are not in the dataset.")
+        print("Error: One or both countries are not in the dataset.")
         return
-    
+
     data = data.map(convert_population)
 
     years = [int(year) for year in data.columns
              if 1800 <= int(year) <= 2050]
-    
-    first_country_values = data.loc[first_country, [str(year) for year in years]]
-    other_country_values = data.loc[other_country, [str(year) for year in years]]
+
+    first_country_values = \
+        data.loc[first_country, [str(year) for year in years]]
+    other_country_values = \
+        data.loc[other_country, [str(year) for year in years]]
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
@@ -47,7 +48,7 @@ def aff_pop(data: pd.DataFrame, first_country: str, other_country: str):
         ticker.FuncFormatter(lambda x, pos: f'{x / 1_000_000:.0f}M')
     )
 
-    ax.set_title(f"Population Projections")
+    ax.set_title("Population Projections")
     ax.set_xlabel("Year")
     ax.set_ylabel("Population")
     ax.legend()
