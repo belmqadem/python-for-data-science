@@ -6,6 +6,9 @@ import pandas as pd
 
 
 def convert_population(value):
+    """
+    Converts a population string with suffixes (K, M, B) to a float.
+    """
     value = str(value).strip().upper()
 
     if value.endswith('K'):
@@ -59,4 +62,4 @@ def aff_pop(data: pd.DataFrame, first_country: str, other_country: str):
 
 if __name__ == '__main__':
     data = load("population_total.csv")
-    aff_pop(data, first_country="Morocco", other_country="Egypt")
+    aff_pop(data, first_country="Morocco", other_country="Spain")

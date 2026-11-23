@@ -29,4 +29,4 @@ def load(path: str) -> pd.DataFrame | None:
 
 
 if __name__ == '__main__':
-    load("life_expectancy_years2.csv")
+    load("life_expectancy_years.csv")

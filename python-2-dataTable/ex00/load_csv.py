@@ -7,7 +7,7 @@ def load(path: str) -> pd.DataFrame | None:
     Loads a CSV file into a pandas DataFrame and prints its dimensions.
     """
     try:
-        data = pd.read_csv(path, index_col=0)
+        data = pd.read_csv(path)
     except FileNotFoundError:
         print(f"Error: The file '{path}' does not exist.")
         return None
@@ -29,4 +29,4 @@ def load(path: str) -> pd.DataFrame | None:
 
 
 if __name__ == '__main__':
-    load("life_expectancy_years2.csv")
+    load("life_expectancy_years.csv")
