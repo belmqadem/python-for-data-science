@@ -16,7 +16,6 @@ def ft_load(path: str) -> np.ndarray | None:
     try:
         img = Image.open(path)
         rgb_format = np.array(img)
-        print(f"The shape of image is: {rgb_format.shape}")
         return rgb_format
     except (ValueError, TypeError, IndexError, FileNotFoundError) as e:
         print(f"Error: {e}")
