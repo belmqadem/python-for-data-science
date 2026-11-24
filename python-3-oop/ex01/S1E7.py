@@ -12,6 +12,7 @@ class Baratheon(Character):
         eyes="brown",
         hairs="dark",
     ):
+        """Constructor of Baratheon class."""
         self.first_name = first_name
         self.is_alive = is_alive
         self.family_name = family_name
@@ -19,9 +20,11 @@ class Baratheon(Character):
         self.hairs = hairs
 
     def __str__(self):
+        """String representation of Baratheon character."""
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def __repr__(self) -> str:
+        """Official string representation of Baratheon character."""
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def die(self):
@@ -40,6 +43,7 @@ class Lannister(Character):
         eyes="blue",
         hairs="light",
     ):
+        """Constructor of Lannister class."""
         self.first_name = first_name
         self.is_alive = is_alive
         self.family_name = family_name
@@ -47,9 +51,11 @@ class Lannister(Character):
         self.hairs = hairs
 
     def __str__(self):
+        """String representation of Lannister character."""
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def __repr__(self) -> str:
+        """Official string representation of Lannister character."""
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     @staticmethod

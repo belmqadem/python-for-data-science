@@ -15,6 +15,7 @@ class Character(ABC):
 
     @abstractmethod
     def die(self):
+        """Abstract method to be implemented by subclasses."""
         pass
 
 
@@ -27,13 +28,4 @@ class Stark(Character):
 
 
 if __name__ == "__main__":
-    p1 = Stark("Rob", False)
-
-    print(p1.first_name)
-    print(p1.is_alive)
-
-    p1.toggleHealthState()
-    print(p1.is_alive)
-
-    p1.toggleHealthState()
-    print(p1.is_alive)
+    pass
