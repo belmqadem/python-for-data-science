@@ -15,6 +15,7 @@ class Character(ABC):
 
     @abstractmethod
     def die(self):
+        """Abstract method to be implemented by subclasses."""
         pass
 
 
